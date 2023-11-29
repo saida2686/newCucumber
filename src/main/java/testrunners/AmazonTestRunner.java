@@ -9,7 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/main/java/Apfeatures/Search.feature"},
         tags="@Smoke or Regression",
-        glue = {"StepDefinitions","Myhooks"}
+        glue = {"StepDefinitions","Myhooks"},
+        plugin={"pretty",
+        "json:target/MyReports/report.json","junit:target/MyReports/report.xml"}
 
 )
 public class AmazonTestRunner {
